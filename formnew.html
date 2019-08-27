@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel = "stylesheet" type= "text/css" href = "{% static 'css/style.css' %}"/>
+</head>
+<body style="background-color:powderblue;">
+
+<!--<img src= "{% static 'images/logo.png' %}" alt="image not available"/>-->
+<p><centre><h3>REGISTRATION PAGE</h3></centre></p>
+    <form method="POST" action= "{% url 'successpage' %}" >
+        {% csrf_token %}
+        <table border="1">
+             {{ form.as_table }}
+        </table>
+    <input id="submit" type="submit" value="Submit" />
+</form>
+<div>
+    {% for user in Users %}
+        <p>{{user.firstname}}</p>
+    {% endfor %}
+</div>
+</body>
+</html>

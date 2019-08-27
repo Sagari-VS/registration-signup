@@ -1,0 +1,8 @@
+<h1>Articles Page</h1>
+
+
+<form method="POST" action= {% url 'Articles:successpage' %}>
+{% csrf_token %}
+Enter your name: <input type='text' name='textbox1'/><br><br>
+<input type="submit" name="Submit"/>
+</form>
