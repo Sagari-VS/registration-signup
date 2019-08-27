@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel = "stylesheet" type= "text/css" href = "{% static 'css/style.css' %}"/>
+</head>
+<body style="background-color:powderblue;">
+
+<!--<img src= "{% static 'images/logo.png' %}" alt="image not available"/>-->
+<p><centre><h3>DISPLAY PAGE</h3></centre></p>
+<table>
+    <thead>
+        <th> First name </th>
+    </thead>
+    <tbody>
+        <td>
+            {{ data.firstname }}
+        </td>
+    </tbody>
+</table>
+</body>
+</html>
